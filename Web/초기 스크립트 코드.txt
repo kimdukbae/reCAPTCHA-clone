@@ -1,0 +1,38 @@
+var car_imgArray = new Array();
+var bus_imgArray = new Array();
+var cat_imgArray = new Array();
+var dog_imgArray = new Array();
+var ship_imgArray = new Array();
+
+	for(var i=0; i<=190; i++){
+		car_imgArray[i] = "images1/test/car/car (" +(i+1)+ ").jpg";
+		bus_imgArray[i] = "images1/test/bus/bus (" +(i+1)+ ").jpg";
+		cat_imgArray[i] = "images1/test/cat/cat (" +(i+1)+ ").jpg";
+		dog_imgArray[i] = "images1/test/dog/dog (" +(i+1)+ ").jpg";
+		ship_imgArray[i] = "images1/test/ship/ship (" +(i+1)+ ").jpg";
+	}
+
+	function showImage(){
+		var imgNum = Math.round(Math.random()*190 + 1);
+		var imgNum1 = Math.round(Math.random()*190 + 1);
+
+		var objImg = document.getElementById("introImg");
+		var objImg1 = document.getElementById("introImg1");
+		var objImg2 = document.getElementById("introImg2");
+		var objImg3 = document.getElementById("introImg3");
+		var objImg4 = document.getElementById("introImg4");
+		var objImg5 = document.getElementById("introImg5");
+		var objImg6 = document.getElementById("introImg6");
+		var objImg7 = document.getElementById("introImg7");
+		var objImg8 = document.getElementById("introImg8");
+
+		objImg.src = car_imgArray[imgNum];
+		objImg1.src = bus_imgArray[imgNum];
+		objImg2.src = cat_imgArray[imgNum];
+		objImg3.src = dog_imgArray[imgNum];
+		objImg4.src = ship_imgArray[imgNum];
+		objImg5.src = car_imgArray[imgNum1];
+		objImg6.src = bus_imgArray[imgNum1];
+		objImg7.src = cat_imgArray[imgNum1];
+		objImg8.src = dog_imgArray[imgNum1];
+	}

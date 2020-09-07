@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>invisible recaptcha</title>
+    <style>
+      .wrapper {
+        display: grid;
+        grid-template-columns:200px 200px 200px;
+        grid-template-rows:200px 200px 200px;
+      }
+      .wrapper div{
+        border:1px solid black;
+      }
+    </style>
+    <script src="./script.js"></script>
+
+  </head>
+
+  <body onload = "showImage()">
+    <div class="wrapper">
+      <div><button class="btn" id="btn0" type="submit" name="btn0"><img id = "introImg0" border="0" width=180 height=180></button></div>
+      <div><button class="btn" id="btn1" type="submit" name="btn1"><img id = "introImg1" border="0" width=180 height=180></button></div>
+      <div><button class="btn" id="btn2" type="submit" name="btn2"><img id = "introImg2" border="0" width=180 height=180></button></div>
+      <div><button class="btn" id="btn3" type="submit" name="btn3"><img id = "introImg3" border="0" width=180 height=180></button></div>
+      <div><button class="btn" id="btn4" type="submit" name="btn4"><img id = "introImg4" border="0" width=180 height=180></button></div>
+      <div><button class="btn" id="btn5" type="submit" name="btn5"><img id = "introImg5" border="0" width=180 height=180></button></div>
+      <div><button class="btn" id="btn6" type="submit" name="btn6"><img id = "introImg6" border="0" width=180 height=180></button></div>
+      <div><button class="btn" id="btn7" type="submit" name="btn7"><img id = "introImg7" border="0" width=180 height=180></button></div>
+      <div><button class="btn" id="btn8" type="submit" name="btn8"><img id = "introImg8" border="0" width=180 height=180></button></div>
+    </div>
+
+    <br>
+    <script>
+      var classification = Math.round(Math.random()*5);
+      switch (classification) {
+        case 0:
+          document.write("자동차를 고르세요.");
+          if(btn0.onclick()){
+            alert('정답입니다.');
+          }
+          break;
+        case 1:
+          document.write("버스를 고르세요.");
+          break;
+        case 2:
+          document.write("고양이를 고르세요.");
+            break;
+        case 3:
+          document.write("배를 고르세요.");
+            break;
+        default:
+          document.write("강아지를 고르세요.");
+          break;
+      }
+    </script>
+  </body>
+</html>

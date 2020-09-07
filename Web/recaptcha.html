@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>invisible recaptcha</title>
+    <style>
+      .wrapper {
+        display: grid;
+        grid-template-columns:200px 200px 200px;
+        grid-template-rows:200px 200px 200px;
+      }
+      .wrapper div{
+        border:1px solid black;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div><label><input type="checkbox" name="check" id="chk0"><label for="chk0"><img id = "introImg0" border="0" width=180 height=170></label></div>
+      <div><label><input type="checkbox" name="check" id="chk1"><label for="chk1"><img id = "introImg1" border="0" width=180 height=170></label></div>
+      <div><label><input type="checkbox" name="check" id="chk2"><label for="chk2"><img id = "introImg2" border="0" width=180 height=170></label></div>
+      <div><label><input type="checkbox" name="check" id="chk3"><label for="chk3"><img id = "introImg3" border="0" width=180 height=170></label></div>
+      <div><label><input type="checkbox" name="check" id="chk4"><label for="chk4"><img id = "introImg4" border="0" width=180 height=170></label></div>
+      <div><label><input type="checkbox" name="check" id="chk5"><label for="chk5"><img id = "introImg5" border="0" width=180 height=170></label></div>
+      <div><label><input type="checkbox" name="check" id="chk6"><label for="chk6"><img id = "introImg6" border="0" width=180 height=170></label></div>
+      <div><label><input type="checkbox" name="check" id="chk7"><label for="chk7"><img id = "introImg7" border="0" width=180 height=170></label></div>
+      <div><label><input type="checkbox" name="check" id="chk8"><label for="chk8"><img id = "introImg8" border="0" width=180 height=170></label></div>
+    </div>
+
+  <script text="javascript">
+    var car_imgArray = new Array();
+    var bus_imgArray = new Array();
+    var cat_imgArray = new Array();
+    var dog_imgArray = new Array();
+    var ship_imgArray = new Array();
+
+       for(var i=0; i<=190; i++){
+          car_imgArray[i] = "images1/test/car/car (" +(i+1)+ ").jpg";
+          bus_imgArray[i] = "images1/test/bus/bus (" +(i+1)+ ").jpg";
+          cat_imgArray[i] = "images1/test/cat/cat (" +(i+1)+ ").jpg";
+          dog_imgArray[i] = "images1/test/dog/dog (" +(i+1)+ ").jpg";
+          ship_imgArray[i] = "images1/test/ship/ship (" +(i+1)+ ").jpg";
+       }
+
+
+          var objImg = new Array();
+          for(var i=0; i<9; i++){
+             objImg[i] = document.getElementById("introImg" + i);
+          }
+
+          var source = new Array();
+          var img_src;
+          for(var i=0; i<9; i++){
+             var rand = Math.round(Math.random()*4);
+             var imgNum = Math.round(Math.random()*190 + 1);
+             if(rand == 1){
+                img_src = car_imgArray[imgNum];
+             }
+             else if(rand == 2){
+                img_src = bus_imgArray[imgNum];
+             }
+             else if(rand == 3){
+                img_src = dog_imgArray[imgNum];
+             }
+             else if(rand == 4){
+                img_src = cat_imgArray[imgNum];
+             }
+             else {
+                img_src = ship_imgArray[imgNum];
+             }
+             objImg[i].src = img_src;
+          }
+
+    </script>
+
+    <br>
+    <script type="text/javascript">
+    var classification = Math.round(Math.random()*4);
+    switch (classification) {
+      case 0:
+        document.write("자동차를 고르세요.");
+        break;
+      case 1:
+        document.write("버스를 고르세요.");
+        break;
+      case 2:
+        document.write("고양이를 고르세요.");
+          break;
+      case 3:
+        document.write("배를 고르세요.");
+          break;
+      default:
+        document.write("강아지를 고르세요.");
+        break;
+    }
+      var src = new Array();
+      var val = new Array();
+
+              for(var i=0; i<9; i++){
+                src[i] = document.getElementById("introImg" + i);//src라는 배열에 정보삽입
+                if((src[i].src).indexOf("car") != -1){//[i]번째 이미지가 "car"이면
+                  val[i] = 0;
+                }
+                else if ((src[i].src).indexOf("bus") != -1) {//버스
+                    val[i] = 1;
+                  }
+                else if ((src[i].src).indexOf("cat") != -1) {//고양이
+                    val[i] = 2;
+                  }
+                  else if ((src[i].src).indexOf("ship") != -1) {//배
+                    val[i] = 3;
+                  }
+                  else if ((src[i].src).indexOf("dog") != -1) {            //강아지
+                    val[i] = 4;
+                  }
+              }
+
+
+      function btn_click(){
+
+        var choice = 0; //정답갯수
+        var cnt = 0; // 내가고른그림 횟수
+        var loc = new Array();
+        var ok = 0
+
+        var chkbox = document.getElementsByName('check');
+        var chk = false;
+
+        for (var i = 0; i < 9; i++) {
+          if (classification == val[i]) {
+            cnt++;
+          }
+        }
+
+        if(classification == 0) {
+          for(var i=0 ; i<chkbox.length ; i++) {
+            if(val[i] == 0 && chkbox[i].checked){
+            chk = true;
+            choice++;
+
+          } else if (val[i] != 0 && chkbox[i].checked) {
+            ok++;
+          } else {
+            chk = false;
+            }
+          }
+        } else if(classification == 1) {
+          for(var i=0 ; i<chkbox.length ; i++) {
+            if(val[i] == 1 && chkbox[i].checked){
+            chk = true;
+            choice++;
+          } else if (val[i] != 1 && chkbox[i].checked) {
+              ok++;
+            }  else {
+            chk = false;
+            }
+          }
+        } else if(classification == 2) {
+          for(var i=0 ; i<chkbox.length ; i++) {
+            if(val[i] == 2 && chkbox[i].checked){
+            chk = true;
+            choice++;
+          } else if (val[i] != 2 && chkbox[i].checked) {
+              ok++;
+            }  else {
+            chk = false;
+            }
+          }
+        } else if(classification == 3) {
+          for(var i=0 ; i<chkbox.length ; i++) {
+            if(val[i] == 3 && chkbox[i].checked){
+            chk = true;
+            choice++;
+          } else if (val[i] != 3 && chkbox[i].checked) {
+              ok++;
+            }  else {
+            chk = false;
+            }
+          }
+        } else if(classification == 4) {
+          for(var i=0 ; i<chkbox.length ; i++) {
+            if(val[i] == 4 && chkbox[i].checked){
+            chk = true;
+            choice++;
+          } else if (val[i] != 4 && chkbox[i].checked) {
+              ok++;
+            }  else {
+            chk = false;
+            }
+          }
+        }
+
+        // alert(cnt)
+        // alert(choice)
+        // alert(ok)
+
+        if (cnt == choice && ok == 0) {
+          alert("정답입니다!")
+        } else {
+          alert("오답입니다!")
+        }
+    }
+
+
+    </script>
+    <br><br>
+    <button class="btn" id="btn" type="submit" name="btn" onclick="btn_click()">정답확인</button>
+    <br><br><br><br><br><br><br>
+
+    <script>
+        var src1 = jQuery('#introImg0').attr("src");  //상대경로
+        var src2 = jQuery('#introImg1').attr("src");
+        var src3 = jQuery('#introImg2').attr("src");
+        var src4 = jQuery('#introImg3').attr("src");
+        var src5 = jQuery('#introImg4').attr("src");
+        var src6 = jQuery('#introImg5').attr("src");
+        var src7 = jQuery('#introImg6').attr("src");
+        var src8 = jQuery('#introImg7').attr("src");
+        var src9 = jQuery('#introImg8').attr("src");
+
+        var total = src1 +"\n" + src2 +"\n" + src3 +"\n" + src4 +"\n" + src5 +"\n" + src6 +"\n" + src7 +"\n" + src8 +"\n" + src9
+
+        // var s1 = src1;
+        // var s2 = src2;
+        // var s3 = src3;
+        // var s4 = src4;
+        // var s5 = src5;
+        // var s6 = src6;
+        // var s7 = src7;
+        // var s8 = src8;
+        // var s9 = src9;
+        //
+        // window.open("fixed.html?:"+s1+":"+s2+":"+s3+":"+s4+":"+s5+":"+s6+":"+s7+":"+s8+":"+s9);
+        // console.log(src1);
+        // console.log(src[0].src);
+
+
+  //       function download(filename, text) {
+  //           var element = document.createElement('a');
+  //           element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(total));
+  //           element.setAttribute('download', filename);
+  //
+  //           element.style.display = 'none';
+  //           document.body.appendChild(element);
+  //
+  //           element.click();
+  //
+  //           document.body.removeChild(element);
+  //         }
+  //
+  // </script>
+  //       <form onsubmit="download(this['name'].value, this['text'].value)">
+  //       <input type="text" name="name" value="test.txt">
+  //       <textarea name="text"></textarea>
+  //       <input type="submit" value="Download">
+  //       </form>
+
+
+  </body>
+</html>

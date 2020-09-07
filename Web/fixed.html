@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>invisible recaptcha</title>
+    <style>
+      .wrapper {
+        display: grid;
+        grid-template-columns:200px 200px 200px;
+        grid-template-rows:200px 200px 200px;
+      }
+      .wrapper div{
+        border:1px solid black;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+
+    <script text="javascript">
+
+      var temp = location.href.split("?");
+      data = temp[1].split(":");
+      s0 = data[0];  //빈칸
+      s1 = data[1];
+      s2 = data[2];
+      s3 = data[3];
+      s4 = data[4];
+      s5 = data[5];
+      s6 = data[6];
+      s7 = data[7];
+      s8 = data[8];
+      s9 = data[9];
+      // console.log(s1,s2);
+
+      </script>
+
+    <div class="wrapper">
+      <div><img src="images1/test/car/car (1).jpg" id="replace-image1" border="0" width=180 height=180></div>
+      <div><img src="images1/test/car/car (1).jpg" id="replace-image2" border="0" width=180 height=180></div>
+      <div><img src="images1/test/car/car (1).jpg" id="replace-image3" border="0" width=180 height=180></div>
+      <div><img src="images1/test/car/car (1).jpg" id="replace-image4" border="0" width=180 height=180></div>
+      <div><img src="images1/test/car/car (1).jpg" id="replace-image5" border="0" width=180 height=180></div>
+      <div><img src="images1/test/car/car (1).jpg" id="replace-image6" border="0" width=180 height=180></div>
+      <div><img src="images1/test/car/car (1).jpg" id="replace-image7" border="0" width=180 height=180></div>
+      <div><img src="images1/test/car/car (1).jpg" id="replace-image8" border="0" width=180 height=180></div>
+      <div><img src="images1/test/car/car (1).jpg" id="replace-image9" border="0" width=180 height=180></div>
+    </div>
+
+
+  <script type="text/javascript">
+    jQuery("#replace-image1").attr("src", s1);
+    jQuery("#replace-image2").attr("src", s2);
+    jQuery("#replace-image3").attr("src", s3);
+    jQuery("#replace-image4").attr("src", s4);
+    jQuery("#replace-image5").attr("src", s5);
+    jQuery("#replace-image6").attr("src", s6);
+    jQuery("#replace-image7").attr("src", s7);
+    jQuery("#replace-image8").attr("src", s8);
+    jQuery("#replace-image9").attr("src", s9);
+
+
+
+  </script>
+  </body>
+
+</html>
