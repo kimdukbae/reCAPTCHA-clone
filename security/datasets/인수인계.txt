@@ -1,0 +1,5 @@
+여기서는 항상 너가 뭔가 데이터 구성이 바뀌거나 하면 손봐줘야하는게 몇가지 있어 colon.py랑 download_and_convert_colon.py
+
+colon.py에서는 그냥 split size랑 num_classes만 바꿔주면대고 너 데이터에 맞춰서
+
+download_and_convert_colon.py는 알다시피 num_validation만 바꿔주면대
