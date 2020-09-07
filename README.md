@@ -7,5 +7,3 @@
 
 ![image](https://user-images.githubusercontent.com/62137510/92397263-809b3b00-f161-11ea-87d4-d6671050c294.png)
 ![image](https://user-images.githubusercontent.com/62137510/92397280-8729b280-f161-11ea-9364-cf4cbb81b828.png)
-
-# Usage
