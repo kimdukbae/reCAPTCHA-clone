@@ -38,8 +38,8 @@
 
 '로봇이 아닙니다' 체크박스에 체크 후 아이디, 비밀번호 입력 (실제 로그인하는 환경과 유사하게 구현)
 
-
-
+<br>
+<br>
 
 
 2. 
@@ -47,15 +47,15 @@
 
 Google reCAPTCHA와 유사하게 만든 HTML 실행
 
-
-
+<br>
+<br>
 
 
 3. 
 ![5](https://user-images.githubusercontent.com/50494545/92571082-a2a9d000-f2bd-11ea-9917-336ab3fe0233.png)
 
-
-
+<br>
+<br>
 
 
 4. Python Model Execution
@@ -64,8 +64,8 @@ Google reCAPTCHA와 유사하게 만든 HTML 실행
 
 Image Cropping 과정
 
-
-
+<br>
+<br>
 
 
 5. 
