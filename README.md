@@ -14,11 +14,6 @@
 ![image](https://user-images.githubusercontent.com/62137510/92397263-809b3b00-f161-11ea-87d4-d6671050c294.png)
 ![image](https://user-images.githubusercontent.com/62137510/92397280-8729b280-f161-11ea-9364-cf4cbb81b828.png)
 
-* Confusion Matrix
-
-![1](https://user-images.githubusercontent.com/50494545/92570976-81e17a80-f2bd-11ea-9a0e-d9cde18e7e6c.PNG)
-
-
 <br>
 
 
@@ -72,3 +67,11 @@ Image Cropping 과정
 ![7](https://user-images.githubusercontent.com/50494545/92571140-b35a4600-f2bd-11ea-8724-e03ed811630f.png)
 
 The result of finding answer from Python Deep Learning model
+
+<br>
+<br>
+
+## Confusion Matrix
+
+![1](https://user-images.githubusercontent.com/50494545/92570976-81e17a80-f2bd-11ea-9a0e-d9cde18e7e6c.PNG)
+
