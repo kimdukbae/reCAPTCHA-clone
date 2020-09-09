@@ -32,7 +32,8 @@
 
 ## Usage
 
-1. ![3](https://user-images.githubusercontent.com/50494545/92571029-91f95a00-f2bd-11ea-9c17-2ee69c803525.PNG)
+1. 
+![3](https://user-images.githubusercontent.com/50494545/92571029-91f95a00-f2bd-11ea-9c17-2ee69c803525.PNG)
 3c1136.PNG)
 
 '로봇이 아닙니다' 체크박스에 체크 후 아이디, 비밀번호 입력 (실제 로그인하는 환경과 유사하게 구현)
@@ -41,7 +42,8 @@
 
 
 
-2. ![4](https://user-images.githubusercontent.com/50494545/92571061-9aea2b80-f2bd-11ea-92c4-74ee4cf0eec8.png)
+2. 
+![4](https://user-images.githubusercontent.com/50494545/92571061-9aea2b80-f2bd-11ea-92c4-74ee4cf0eec8.png)
 
 Google reCAPTCHA와 유사하게 만든 HTML 실행
 
@@ -49,7 +51,8 @@ Google reCAPTCHA와 유사하게 만든 HTML 실행
 
 
 
-3. ![5](https://user-images.githubusercontent.com/50494545/92571082-a2a9d000-f2bd-11ea-9917-336ab3fe0233.png)
+3. 
+![5](https://user-images.githubusercontent.com/50494545/92571082-a2a9d000-f2bd-11ea-9917-336ab3fe0233.png)
 
 
 
@@ -65,6 +68,7 @@ Image Cropping 과정
 
 
 
-5. ![7](https://user-images.githubusercontent.com/50494545/92571140-b35a4600-f2bd-11ea-8724-e03ed811630f.png)
+5. 
+![7](https://user-images.githubusercontent.com/50494545/92571140-b35a4600-f2bd-11ea-8724-e03ed811630f.png)
 
 The result of finding answer from Python Deep Learning model
